@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --tomato: hsl(4, 100%, 67%);
+  --tomato-light: hsl(4, 67%, 92%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--dark-slate-grey);
+  font-family: "Roboto", sans-serif;
+  background-color: var(--charcoal-grey);
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  font-size: 0.8rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 30rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+}
+
+main {
+  background-color: var(--white);
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 30px;
+  padding: 1rem;
+}
+
+form {
+  max-width: 24rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+form > p {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+form > ul {
+  margin: 0.5rem 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+form > ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+form > ul img {
+  max-height: 1rem;
+}
+
+form > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -0.6rem;
+}
+
+.error,
+form label {
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+
+.error {
+  color: var(--tomato);
+}
+
+.hidden {
+  display: none;
+}
+
+form input {
+  font-size: 0.8rem;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--grey);
+  cursor: pointer;
+}
+
+main > form > .error-input {
+  border-color: var(--tomato);
+  color: var(--tomato);
+  background-color: var(--tomato-light);
+}
+
+button {
+  border: 0;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.8rem;
+  background-image: linear-gradient(
+    90deg,
+    var(--dark-slate-grey) 65%,
+    var(--charcoal-grey)
+  );
+  cursor: pointer;
+  transition: all 1s;
+}
+
+button:hover {
+  background-image: linear-gradient(35deg, var(--tomato) 65%, orange);
+  box-shadow: 2px 4px 25px var(--tomato);
+}
+
+.success-screen {
+  background-color: var(--white);
+  border-radius: 30px;
+  padding: 3rem;
+  max-width: 24rem;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1.7rem;
+}
+
+#success-screen > p:nth-child(2) {
+  line-height: 2.6rem;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: var(--dark-slate-grey);
+}
+
+#success-screen > p:nth-child(3) {
+  color: var(--dark-slate-grey);
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  font-weight: 500;
+}
+
+#success-screen span {
+  font-weight: 700;
+}
+
+#success-screen img {
+  width: 3rem;
+}
+
+.flex {
+  display: flex;
+}
