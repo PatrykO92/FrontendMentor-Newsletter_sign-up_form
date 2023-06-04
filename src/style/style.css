@@ -56,7 +56,6 @@ main {
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: space-evenly;
-  align-items: center;
   gap: 1rem;
   border-radius: 30px;
   padding: 1rem;
@@ -151,7 +150,7 @@ button:hover {
   box-shadow: 2px 4px 25px var(--tomato);
 }
 
-.success-screen {
+#success-screen {
   background-color: var(--white);
   border-radius: 30px;
   padding: 3rem;
@@ -185,4 +184,45 @@ button:hover {
 
 .flex {
   display: flex;
+}
+
+@media (max-width: 768px) {
+  main {
+    max-width: 35rem;
+    padding: 0;
+  }
+}
+
+@media (max-width: 468px) {
+  main {
+    min-height: 100vh;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  #success-screen {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    max-width: 100%;
+    padding: 1rem;
+    border-radius: 0;
+    margin: 0;
+    justify-content: center;
+  }
+
+  #success-screen > button {
+    margin-top: 5rem;
+  }
+
+  form {
+    padding: 1rem;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 299px) {
+  #success-screen > p:nth-child(2) {
+    font-size: 2.2rem;
+  }
 }
